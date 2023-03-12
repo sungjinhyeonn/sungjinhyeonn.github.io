@@ -12,9 +12,10 @@ permalink: /categories1/Linear-Regression/
 toc: true
 toc_sticky: true
 
-Typora-root-url : ../
+Typora-root-url: ../
 
-use_math :true
+use_math: true
+
 date: 2020-05-21
 last_modified_at: 2021-10-09
 ---
