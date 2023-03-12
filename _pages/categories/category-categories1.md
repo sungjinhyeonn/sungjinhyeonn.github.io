@@ -1,7 +1,7 @@
 ---
-title: "Categories1"
+title: "머신러닝"
 layout: category
-permalink: /categories/categories1/
+permalink: /categories/Categories1/
 author_profile: true
 taxonomy: Categories1
 sidebar:
