@@ -139,8 +139,10 @@ $$
 
 ## 로짓 변환
 
-![스크린샷 2023-03-12 오후 8.44.31](/assets/images/posts_img/2023-03-12-Logistic-Regression/스크린샷 2023-03-12 오후 8.44.31.png)
+![logit](/assets/images/posts_img/2023-03-12-Logistic-Regression/logit.png)
 
 선형으로 변하게 된다.
 
-그래프로 ![스크린샷 2023-03-12 오후 8.33.19](/assets/images/posts_img/2023-03-12-Logistic-Regression/스크린샷 2023-03-12 오후 8.33.19.png)
+그래프로 
+
+![grahp](/assets/images/posts_img/2023-03-12-Logistic-Regression/grahp.png)
