@@ -93,12 +93,12 @@ analytics:
   provider: "google-gtag"
   # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id: "your tracking id here"
+    tracking_id: ""
     anonymize_ip: # true, false (default)
 
 # Site Author
 author:
-  name: "your name here" # 블로그 닉네임
+  name: "JinHyeon develog" # 블로그 닉네임
   avatar: "/assets/images/profile.jpeg" # 블로그 프로필 사진
   #   bio              : "hi all!"
   # location         : "Seoul, Korea"
