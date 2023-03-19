@@ -20,9 +20,5 @@ main:
 categories:
   - title: "머신러닝"
     url: /categories/Categories1/
-  - title: "Categories2"
+  - title: "강화학습"
     url: /categories/categories2/
-  - title: "Categories3"
-    url: /categories/categories3/
-  - title: "Categories4"
-    url: /categories/categories4/
