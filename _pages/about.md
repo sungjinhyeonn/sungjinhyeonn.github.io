@@ -1,8 +1,8 @@
 ---
-title: "Hi all! I'm OOOOOO👋🏻"
+title: "끄적끄적 대학원 공부"
 permalink: /about/
 layout: single
 comments: false
 ---
 
-본인 소개 여기에 입력
+대학원 공부하다가 생각나면 쓰는 곳
