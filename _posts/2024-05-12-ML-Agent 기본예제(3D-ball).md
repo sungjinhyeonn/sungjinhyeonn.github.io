@@ -1,0 +1,99 @@
+---
+title: "ML-agent 기본 예제(3D-ball)"
+excerpt: "3D-ball 기본예제"
+
+categories:
+  - Categories4
+tags:
+  - [tag1, tag2]
+
+permalink: /categories4/ML-Agent 기본예제(3D-ball)/
+
+toc: true
+toc_sticky: true
+
+Typora-root-url: ../
+
+use_math: true
+
+date: 2024-05-11
+last_modified_at: 2024-05-11
+
+
+---
+
+# ML-agent 기본 예제(3D-ball)
+
+![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled.png)
+
+# Inspector
+
+![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 1.png)
+
+### Behavior Parameters
+
+- Vetor Obaservation
+
+  - 환경의 수치적 관측 관련 설정
+  - Space Size를 통해 관측의 크기 설정
+  - Stacked Vector를 통해 관측의 누적 횟수 결정
+
+  ![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 2.png)
+
+- Agent 학습과 관련된 다양한 파라미터를 수정가능
+
+- ML Agent 설정을 위해 반드시 추가되어야 하는 요소
+
+- Actions
+
+  - 에이전트의 행동 관련 설정
+  - 에이전트의 이산적 행동과 연속적 행동의 수를 설정
+  - 이산적 행동에서의 Branches Size 설정
+
+  ![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 3.png)
+
+- Model
+
+  - 강화학습 알고리즘을 통해 학습된 모델 → 행동 결정 가능
+  - 실제 학습의 결과를 확인하기 위해 학습된 모델 사용
+
+- Behavior Type
+
+  - 에이전트의 행동방식
+  - Inference : 모델적용 O
+  - Heuristic : 모델 적용 X, 사용자 직접 설정 가능
+
+- Team ID
+
+  - 같은 팀 ID를 가지면 정책 공유하여 업데이트 → 동시에 데이터 수집 및 학습 가능
+  - 에이전트 간 공유할 정책 Index
+
+### Ball 3D Agent(Script)
+
+- Max Step : 한 에피소드 당 최대 스텝의 수
+- Initialize : 환경이 실행될 때 호출되는 초기화 함수
+  - 환경이 호출될 때 1번 실행
+  - 함수 object, 파라미터 초기화
+
+![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 4.png)
+
+- Collectobservations : Agents에게 Vector Observation 정보를 전달해주는 함수
+  - Vector sensor을 Sensor로 정의
+  - sensor.AddObsevation 함수를 통해 각 데이터를 전
+
+![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 5.png)
+
+- OnAction Recived : Agent가 결정한 행동을 전달, 보상 업데이트, 에피소드 종료
+- OnEpisodeBegin : 각 에피소드가 시작될 때 호출되는 함수
+- Heuristic : 개발자가 직접 명령을 내리는 휴리스틱 모드에서 사용
+
+### Decision Requester
+
+- Agent가 행동을 정책에게 요청하는 컴포넌트
+- Decision Period : 정책 결정 시간
+  - 값이 작아질수록 새로운 행동을 결정
+- Take Actions Between Decisions
+  - O → 다음 새로운 행동을 선택하기 전까지 계속 행동 취함
+  - X  → 한번만 행동을 취하고, 다음 새로운 행동을  선택하기 전까지 정지
+
+![Untitled](/assets/images/posts_img/2024-05-12-ML-Agent 기본예제(3D-ball)/Untitled 6.png)
